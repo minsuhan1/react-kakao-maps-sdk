@@ -339,15 +339,6 @@ export const Map: MapComponent = React.forwardRef(function Map<
         ? new kakao.maps.LatLng(center.lat, center.lng)
         : new kakao.maps.Coords(center.x, center.y)
 
-    if (
-      (centerPosition instanceof kakao.maps.LatLng &&
-        centerPosition.equals(prevCenter)) ||
-      (centerPosition instanceof kakao.maps.Coords &&
-        centerPosition.toLatLng().equals(prevCenter))
-    ) {
-      return
-    }
-
     if (isPanto) {
       map.panTo(centerPosition, padding)
     } else {
