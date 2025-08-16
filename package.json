@@ -1,5 +1,5 @@
 {
-  "name": "workspace",
+  "name": "react-kakao-maps-sdk",
   "private": true,
   "scripts": {
     "dev": "pnpm -C ./dev dev",
